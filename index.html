@@ -31,7 +31,7 @@
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg" ></span> Contact</a></li>
             </ul>
                 <span class="navbar-text">
-                    <a id="btnlogin" $('#myModal').modal(options)>
+                    <a data-toggle="modal" data-target="#loginModal">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -69,7 +69,6 @@
         </div>
         </div>
     </div>
-
     <header class="jumbotron">
         <div class="container row-header">
             <div class="row">
@@ -80,9 +79,10 @@
                 <div class="col col-sm-3">
                         <img src="images/logo.png" class="img-fluid">
                 </div>
-                <div class="col col-sm-3 align-self-center">
-                    <a id="btnreserve" role="button" class="btn btn-sm btn-warning">Any Query</a>
-                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <a id="btnreserve" role="button" class="btn btn-sm nav-link btn-warning btn-block" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+918630328544</strong>" data-placement="bottom" href="#">Any Query</a>
+                     
+                </div>s
             </div>
         </div>
 
@@ -185,5 +185,12 @@
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"> </script>
+         <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>
+
+
         </body>
         </html>
