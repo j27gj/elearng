@@ -40,7 +40,7 @@ body {
 .carousel {
   background: #512DA8; }
   .carousel .carousel-item {
-    height: 500px;
+    height: 400px;
     width: 100%; }
     .carousel .carousel-item img {
       position: absolute;
