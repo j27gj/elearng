@@ -33,8 +33,8 @@
                 <li class="nav-item dropdown"><a class="nav-link  dropbtn" href="#"><span class="fa fa-list fa-lg  " ></span> Tutorials <span class="fa fa-angle-double-down"></span></a>    <div class="dropdown-content">
     <a href="./new.html">Html</a>
     <a href="./c1.html">Css</a>
-    <a href="./bt1.html">Bootstrap</a>
-    
+    <a href="#">Bootstrap</a>
+  
   </div></li>
                 <li class="nav-item"><a class="nav-link" href="../contactus.html"><span class="fa fa-address-card fa-lg" ></span> Contact</a>  </li>
             </ul>
@@ -78,91 +78,111 @@
         </div>
     </div>
     <div class="new">
-    <div class="row">
-    <div class="col-12 col-sm-12">
-     
-     <h1>HTML Elements</h1>
-       
-<p>An HTML element usually consists of a <strong>start</strong> tag and <strong>end</strong> tag, 
-with the content inserted in between:</p>
-<div  style="font-size:20px;padding:10px;margin-bottom:10px;">
-&lt;tagname&gt;Content goes here...&lt;/tagname&gt;
-</div>
-       <table class="table table-striped table-bordered table-hover table-condensed">
+<h1>Bootstrap Grid System</h1><br><br>
+<p>Bootstrap's grid system allows up to 12 columns across the page.</p>
+<p>If you do not want to use all 12 columns individually, you can group the 
+columns together to create wider columns:</p>
+<div class="table-responsive">
+<table class="table table-bordered">
 <tr>
-<th style="width:33%">Start tag</th>
-<th style="width:33%">Element content</th>
-<th>End tag</th>
+  <td>span 1</td>
+  <td>span 1</td>  
+  <td>span 1</td>
+  <td>span 1</td>
+  <td>span 1</td>  
+  <td>span 1</td>
+  <td>span 1</td>
+  <td>span 1</td>  
+  <td>span 1</td>
+  <td>span 1</td>
+  <td>span 1</td>  
+  <td>span 1</td>
 </tr>
 <tr>
-<td>&lt;h1&gt;</td>
-<td>My First Heading</td>
-<td>&lt;/h1&gt;</td>
+  <td colspan="4">&nbsp;span 4</td>
+  <td colspan="4">&nbsp;span 4</td>  
+  <td colspan="4">&nbsp;span 4</td>
 </tr>
 <tr>
-<td>&lt;p&gt;</td>
-<td>My first paragraph.</td>
-<td>&lt;/p&gt;</td>
+  <td colspan="4">span 4</td>
+  <td colspan="8">span 8</td>  
 </tr>
 <tr>
-<td>&lt;br&gt;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+  <td colspan="6">span 6</td>
+  <td colspan="6">span 6</td>  
+</tr>
+<tr>
+  <td colspan="12">span 12</td>
 </tr>
 </table>
-
+</div>
+<p>Bootstrap's grid system is responsive, and the columns will re-arrange automatically depending on the screen size.</p>
 <hr>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-USAeFpVf_A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <hr>
-   <h2>Nested HTML Elements</h2>
-<p>HTML elements can be nested (elements can contain elements).</p>
-<p>All HTML documents consist of nested HTML elements.</p>
-<p>This example contains four HTML elements:</p><br><br>
+
+<h2>Grid Classes</h2>
+<p>The Bootstrap grid system has four classes:</p>
+<ul>
+  <li><code ">xs</code> (for phones - screens less than 768px wide)</li>
+  <li><code ">sm</code> (for tablets - screens equal to or greater than 768px wide)</li>
+  <li><code ">md</code> (for small laptops - screens equal to or greater than 992px wide)</li>
+  <li><code ">lg</code> (for laptops and desktops - screens equal to or greater than 1200px wide)</li>
+</ul>
+<p>The classes above can be combined to create more dynamic and flexible layouts.</p>
+<hr>
+
+<h2>Basic Structure of a Bootstrap Grid</h2>
+<p>The following is a basic structure of a Bootstrap grid:</p>
+<div >
+ <div >
+  &lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp; 
+   &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; ...<br>&lt;/div&gt;</div>
+</div>
+<p>First; create a row (<code ">&lt;div 
+class="row"&gt;</code>). Then, add the desired number of columns (tags with appropriate 
+<code ">.col-*-*</code> classes). Note that numbers in <code ">.col-*-*</code> should always add up to 12 for each row.</p>
+<p>Below we have collected some examples of basic Bootstrap grid layouts.</p>
+<hr>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YfmKSegokuA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<hr>
+
+<h2>Three Equal Columns</h2>
+<div class="container-fluid" style="margin:8px 0 15px 0;">
+<div class="row test">
+  <div class="col-sm-4 border border-dark">.col-sm-4</div>
+  <div class="col-sm-4 border border-dark">.col-sm-4</div>
+  <div class="col-sm-4 border border-dark">.col-sm-4</div>
+</div>
+</div>
+<p>The following example shows how to get a three equal-width columns starting at tablets and scaling to large desktops. 
+On mobile phones <span lang="no-bok">or screens that are less than 768px wide,
+</span>the columns will automatically stack:</p>
+<div >
 <h3>Example</h3>
-<textarea rows="12" cols="50">
-<!DOCTYPE html>
+<div >
+ &lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;.col-sm-4&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;.col-sm-4&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;.col-sm-4&lt;/div&gt;<br>&lt;/div&gt;</div>
 
-<html>
-<body>
+</div>
+<hr>
 
- <h1>My First Heading</h1>
- <p>My first paragraph.</p>
-
-
-</body>
-</html>
-</textarea>
-
-<h3>Example Explained</h3>
-<p>The <code >&lt;html&gt;</code> element defines the <strong>whole document</strong>.</p>
-<p>It has a <strong>start</strong> tag &lt;html&gt; and an <strong>end</strong> tag &lt;/html&gt;.</p>
-<p>The element <strong>content</strong> is another HTML element (the <code >&lt;body&gt;</code> element).</p>
-
-<p>The <code>&lt;body&gt;</code> element defines the <strong>document body</strong>.</p>
-<p>It has a <strong>start</strong> tag &lt;body&gt; and an <strong>end</strong> tag &lt;/body&gt;.</p>
-<p>The element <strong>content</strong> is two other HTML elements (<code >&lt;h1&gt;</code> and <code class="w3-codespan">
-&lt;p&gt;</code>).</p>
-
-<p>The <code >&lt;h1&gt;</code> element defines a <strong>heading</strong>.</p>
-<p>It has a <strong>start</strong> tag &lt;h1&gt; and an 
-<strong>end</strong> tag &lt;/h1&gt;.</p>
-<p>The element <strong>content</strong> is: My First Heading.</p>
+<h2>Two Unequal Columns</h2>
+<div class="container-fluid" style="margin:8px 0 15px 0;">
+<div class="row test">
+  <div class="col-sm-4">.col-sm-4</div>
+  <div class="col-sm-8">.col-sm-8</div>
+</div>
+</div>
 
 
 
-<p>The <code class="w3-codespan">&lt;p&gt;</code> element defines a <strong>paragraph</strong>.</p>
-<p>It has a <strong>start</strong> tag &lt;p&gt; and an 
-<strong>end</strong> tag &lt;/p&gt;.</p>
-<p>The element <strong>content</strong> is: My first paragraph.</p>
 
 
 <hr>
-<hr>
-<a href="new.html" class="previous">&laquo; Previous</a>
-<a href="ht3.html" class="next">Next &raquo;</a>
 
-</div>
-</div>
+<br><br>
+<a href="bt1.html" class="previous">&laquo; Previous</a>
+<a href="bt3.html" class="next">Next &raquo;</a>
+
+
 </div>
 
 
